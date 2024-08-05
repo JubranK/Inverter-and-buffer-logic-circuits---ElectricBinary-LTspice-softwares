@@ -1,0 +1,33 @@
+# header information:
+Hinv|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tcmos|ScaleFORcmos()D350.0
+Tmocmos|ScaleFORmocmos()D300.0|mocmosNumberOfMetalLayers()I5
+
+# Cell inv;1{sch}
+Cinv;1{sch}||schematic|1701942631425|1701943350712|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-18|9||||
+NOff-Page|conn@1||3|9||||
+NGround|gnd@0||-7|-10||||
+NTransistor|nmos@0||-9|3|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;Y-7;)SNMOS
+NWire_Pin|pin@0||-10|9||||
+NWire_Pin|pin@1||-7|9||||
+Ngeneric:Invisible-Pin|pin@2||-43|12|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin A 0 pwl 10n 0 20n 5 50n 5 60n 0,cload Y 0 250fF,.measure tran tf trig v(Y) val=4.5 fall=1 td=8ns trag v(Y) val=0.5 fall=1,.measure tran tr trig v(Y) val=0.5 rais=1 td=50ns trag v(Y) val=4.5 rais=1,.tran 0 0.1us,".include C:\\Users\\user\\Documents\\C5_models.txt"]
+NTransistor|pmos@0||-9|16|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;Y-5;)SPMOS
+NPower|pwr@0||-7|27||||
+Awire|net@1|||900|pwr@0||-7|27|pmos@0|d|-7|18
+Awire|net@2|||2700|gnd@0||-7|-8|nmos@0|s|-7|1
+Awire|net@4|||900|pmos@0|g|-10|16|pin@0||-10|9
+Awire|net@5|||900|pin@0||-10|9|nmos@0|g|-10|3
+Awire|net@6|||1800|conn@0|y|-16|9|pin@0||-10|9
+Awire|net@7|||900|pmos@0|s|-7|14|pin@1||-7|9
+Awire|net@8|||900|pin@1||-7|9|nmos@0|d|-7|5
+Awire|net@9|||0|conn@1|a|1|9|pin@1||-7|9
+EA||D5G2;|conn@0|y|U
+Ey|Y|D5G2;|conn@1|a|U
+X
